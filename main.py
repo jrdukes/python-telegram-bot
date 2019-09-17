@@ -47,7 +47,7 @@ def send_image(bot, update):
 
 
 def main():
-    updater = Updater('22235bddb38d5282e7e248209ca44c3e161dea46')
+    updater = Updater('INSERT_KEY_HERE')
     updater.job_queue.run_daily(send_image, time=datetime.datetime.strptime(
         '9:00AM', '%I:%M%p').time(), days=(0, 1, 2, 3, 4, 5, 6))
     updater.start_polling()
